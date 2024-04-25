@@ -5,7 +5,8 @@
   import { superForm } from 'sveltekit-superforms/client';
   import type { SuperValidated } from 'sveltekit-superforms';
   import { goto } from '$app/navigation';
-  import { APP_URL } from '$lib/utils/constants';
+
+  import { PUBLIC_APP_URL } from '$env/static/public';
 
   export let props = {
     dataForm: {},
@@ -67,10 +68,13 @@
       formData.append('file', input.files[0]);
 
       try {
-        const { statusCode, data } = await fetch(`${APP_URL}/api/storage`, {
-          method: 'POST',
-          body: formData,
-        }).then((res) => res.json());
+        const { statusCode, data } = await fetch(
+          `${PUBLIC_APP_URL}/api/storage`,
+          {
+            method: 'POST',
+            body: formData,
+          }
+        ).then((res) => res.json());
 
         if (statusCode !== 201) {
           throw new Error('Error al subir imagen');

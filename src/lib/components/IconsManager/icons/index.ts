@@ -1,0 +1,9 @@
+export { default as Home } from './Home.svelte';
+export { default as Box } from './Box.svelte';
+export { default as Cart } from './Cart.svelte';
+export { default as NotFount } from './404.svelte';
+export { default as Logout } from './Logout.svelte';
+export { default as Settings } from './Settings.svelte';
+export { default as Clipboard } from './Clipboard.svelte';
+export { default as Ecommerce } from './Ecommerce.svelte';
+export { default as DummyImagen } from './DummyImage.svelte';

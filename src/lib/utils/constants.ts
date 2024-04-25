@@ -1,0 +1,7 @@
+import {
+	PUBLIC_APP_URL_BASE,
+	PUBLIC_APP_URL_PORT,
+	PUBLIC_APP_URL_PROTOCOL
+} from '$env/static/public';
+
+export const APP_URL = `${PUBLIC_APP_URL_PROTOCOL}${PUBLIC_APP_URL_BASE}${PUBLIC_APP_URL_PORT}`;
